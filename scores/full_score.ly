@@ -9,11 +9,14 @@
     \header {
       title = "S O N A T A"
     }
-    \paper { indent = 3\cm }
+    \paper {
+      indent = 2\cm
+      systems-per-page = #3
+    }
     \score {
       <<
         \new StaffGroup <<
-          \new GrandStaff <<
+          \new GrandStaff \with { \smallGroupDistance } <<
             \set GrandStaff.instrumentName = "Trombone"
             \new Staff {
               \set Staff.instrumentName = "I"
@@ -26,7 +29,7 @@
           >>
         >>
         \new StaffGroup <<
-          \new GrandStaff <<
+          \new GrandStaff \with { \smallGroupDistance } <<
             \set GrandStaff.instrumentName = "Violino"
             \new Staff {
               \set Staff.instrumentName = "I"
@@ -48,7 +51,7 @@
         \new FiguredBass { \BassFigures }
       >>
       \layout { }
-      % \midi { \tempo 4 = 80 }
+      \midi { \tempo 4 = 80 }
     }
   }
 }
