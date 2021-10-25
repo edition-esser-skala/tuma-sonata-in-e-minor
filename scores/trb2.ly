@@ -47,7 +47,7 @@
     \header {
       title = "S O N A T A"
     }
-    \paper { indent = 2.5\cm }
+    \paper { indent = 2.5\cm page-count = #1 }
     \score {
       <<
         \new Staff {
