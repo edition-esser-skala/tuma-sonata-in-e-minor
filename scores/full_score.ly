@@ -1,17 +1,23 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-#(set-global-staff-size 15.87)
+\include "score_settings/full-score.ly"
 
 \book {
   \bookpart {
-    \header {
-      title = "S O N A T A"
-    }
+    \section "Sonata"
+    \addTocEntry
     \paper {
-      indent = 2\cm
+      top-system-spacing.basic-distance = #10
+      top-system-spacing.minimum-distance = #10
+      top-markup-spacing.basic-distance = #0
+      top-markup-spacing.minimum-distance = #0
+      markup-system-spacing.basic-distance = #10
+      markup-system-spacing.minimum-distance = #10
+      system-system-spacing.basic-distance = #18
+      system-system-spacing.minimum-distance = #18
       systems-per-page = #3
+      indent = 2\cm
     }
     \score {
       <<
